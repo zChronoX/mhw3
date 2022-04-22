@@ -1,0 +1,272 @@
+body {
+    margin: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    height: 200px;
+
+}
+
+a {
+    font-weight: normal;
+    font-size: 27px;
+    background-color: pink;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+
+.h {
+    background-image: url(https://res.cloudinary.com/practicaldev/image/fetch/s--eXgVdE2K--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/ux6uf870i7esod0sx4sw.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    height: 500px;
+}
+
+#text-box-header {
+    margin: 0px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 40%
+}
+
+#overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.h {
+    width: 100%;
+}
+
+.h h1 {
+    color: white;
+    width: 100%;
+    font-weight: normal;
+    text-align: center;
+}
+
+.utente {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+.utente img {
+    position: relative;
+    width: 100px;
+    /*Originariamente era 800px, adattata a 100 come richiesto*/
+    height: 100px;
+    margin-top: -50px;
+    /*Richiesto dalla consegna*/
+    border-radius: 100%;
+    background-color: white;
+    /*Bordo della foto*/
+}
+
+.utente .au {
+    font-weight: bold;
+}
+
+.utente .ua {
+    color: grey;
+    font-weight: bold;
+    font-style: italic;
+    border-bottom: 2px solid pink;
+    padding-bottom: 5px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 120px;
+    /*Richiesti 120px di margine inferiore*/
+    margin-top: 60px;
+    /*Richiesti 60px di distanza dalla parte superiore*/
+}
+
+.nclassifica {
+    justify-content: flex-end;
+    margin-top: 40px;
+    padding: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    color: pink;
+    font-weight: bold;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+}
+
+.a {
+    width: 66.67%;
+    /*Richiesto il 66.67% della pagina*/
+    padding: 30px;
+}
+
+.a h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.a h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: pink;
+    margin-top: -40px;
+}
+
+.text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+
+.re {
+    font-family: 'Open-Sans', sans-serif;
+    font-weight: bold;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    margin: auto;
+    height: 75px;
+    background-color: pink;
+    background-size: cover;
+    background-position: center;
+    font-size: 20px;
+    padding: 20px;
+    margin-top: 120px;
+    color: whitesmoke;
+    font-weight: bold;
+    position: relative;
+}
+
+.api{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.api form{
+    width: 85%;
+    padding: 25px;
+    margin: 20px;
+}
+
+input[type=submit]{
+    background-color: pink;
+    color:white;
+    font-weight: normal;
+    font-size: 16px;
+    padding: 5px 10px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 40px;
+    border-color: whitesmoke;
+
+
+}
+
+.album img{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.album span{
+    display: block;
+}
+
+.album a{
+
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    display: block;
+
+}
+
+
+.video img{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.video span{
+    display: block;
+}
+
+.video a{
+
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    display: block;
+
+}
+
+#a1{
+    margin-top: 20px;
+}
+
+#formApi1{
+    border-top: 1px solid pink;
+    border-bottom: 1px solid pink;
+}
+
+#formApi2{
+    border-bottom: 1px solid pink;
+    border-top: 1px solid pink;
+}
+
+@media(max-width: 500px) {
+    .h {
+        width: 100%;
+    }
+
+    nav {
+        width: 90%;
+        margin: 10px;
+        font-size: 10vw;
+        flex-wrap: wrap;
+    }
+
+    .img {
+
+        width: 90%;
+        position: absolute;
+        right: 18px;
+
+    }
+
+}
