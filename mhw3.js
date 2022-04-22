@@ -11,9 +11,10 @@ function onJsonSpotify(json) {
     for (let i = 0; i < num_results; i++) {
         const album_data = results[i]
         const title = album_data.name;
-        const url= album_data.uri;
-        var site= document.createElement('a');
+        const url = album_data.uri;
+        var site = document.createElement('a');
         site.setAttribute('href', url);
+        site.textContent = 'Ascolta su Spotify';
         const selected_image = album_data.images[1].url;
         const album = document.createElement('div');
         album.classList.add('album');
@@ -21,16 +22,15 @@ function onJsonSpotify(json) {
         img.src = selected_image;
         const caption = document.createElement('span');
         caption.textContent = 'Titolo: ' + title;
-        site.textContent = 'Ascolta su Spotify';
-        const artist= album_data.artists[0].name;
-        const artist_name= document.createElement('span');
+        const artist = album_data.artists[0].name;
+        const artist_name = document.createElement('span');
         artist_name.textContent = 'Artista: ' + artist;
         album.appendChild(img);
         album.appendChild(caption);
         album.appendChild(artist_name);
         album.appendChild(site);
         library.appendChild(album);
-    
+
     }
 }
 
@@ -40,6 +40,8 @@ function onResponse(response) {
     console.log('Success!');
     return response.json();
 }
+
+//Funzione ricerca brani di Spotify
 
 function RicercaSpotify(event) {
     event.preventDefault();     // Impedisco il submit
@@ -117,6 +119,8 @@ function onResponseYoutube(response) {
     return response.json();
 }
 
+//API YouTube
+
 function onJsonYoutube(json) {
     console.log(json);
     const library = document.querySelector('#a2');
@@ -129,14 +133,14 @@ function onJsonYoutube(json) {
         const videos = results[i];
         const title = videos.snippet.title;
         const selected_image = videos.snippet.thumbnails.medium.url;
-        const channel_title= videos.snippet.channelTitle;
-        const id= videos.id.videoId;
-        const url=('https://www.youtube.com/watch?v='+id);
-        var site= document.createElement('a');
+        const channel_title = videos.snippet.channelTitle;
+        const id = videos.id.videoId;
+        const url = ('https://www.youtube.com/watch?v=' + id);
+        var site = document.createElement('a');
         site.setAttribute('href', url);
         site.textContent = 'Guarda su YouTube';
-        const chtitle= document.createElement('span');
-        chtitle.textContent= 'Pubblicato da: ' + channel_title;
+        const chtitle = document.createElement('span');
+        chtitle.textContent = 'Pubblicato da: ' + channel_title;
         const video = document.createElement('div');
         video.classList.add('video');
         const img = document.createElement('img');
@@ -151,12 +155,12 @@ function onJsonYoutube(json) {
     }
 }
 
-
+//Funzione ricerca YouTube
 
 
 
 function search(event) {
-    event.preventDefault();
+    event.preventDefault(); // Impedisco il submit
     const text = document.querySelector('#content');
     const text_value = encodeURIComponent(text.value);
     console.log('Cerco:' + text_value);
